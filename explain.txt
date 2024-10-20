@@ -1,0 +1,14 @@
+Lựa chọn hoạt động trong mã được cung cấp là một tập lệnh toàn diện để phân tích dữ liệu và mô hình hồi quy logistic bằng Python. 
+Tập lệnh bắt đầu bằng cách nhập các thư viện cần thiết, chẳng hạn như gấu trúc để thao tác dữ liệu và seaborn để trực quan hóa dữ liệu. 
+Dữ liệu được đọc từ tệp CSV vào DataFrame và việc kiểm tra dữ liệu ban đầu được thực hiện bằng chức  năng kiểm tra.
+Hàm này in các kiểu dữ liệu của các biến, đếm các giá trị bị thiếu và trực quan hóa dữ liệu bị thiếu bằng bản đồ nhiệt.
+Tiếp theo, tập lệnh định nghĩa  hàm encode_categories, sử dụng OrdinalEncoder từ sklearn để mã hóa các biến phân loại thành mã số. 
+Điều này rất cần thiết cho các mô hình học máy yêu cầu đầu vào số.
+Hàm plot_scatterplots sau đó được định nghĩa để tạo các biểu đồ phân tán của các biến số so với một biến phân loại được chỉ định, hỗ trợ khám phá dữ liệu trực quan.
+Tập lệnh cũng bao gồm  hàm selected_diagnotic, tạo ra các biểu đồ cặp cho các biến được chọn để trực quan hóa các mối quan hệ và phân phối.
+Hàm logistic_regression thực hiện hồi quy logistic bằng cách sử dụng statsmodels, cung cấp một bản tóm tắt về sự phù hợp của mô hình.
+Hàm prepare_model chia dữ liệu thành các bộ đào tạo và kiểm tra, trong khi  hàm run_model phù hợp với mô hình hồi quy logistic bằng sklearn và đánh giá hiệu suất của nó bằng các số liệu như điểm ROC AUC và báo cáo phân loại.
+Các chức năng bổ sung như confusion_matrix và roc_curve được xác định để đánh giá thêm hiệu suất của mô hình. Kịch bản cũng giải quyết sự mất cân bằng lớp học bằng cách sử dụng các kỹ thuật như lấy mẫu lại (adjust_imbalance) và SMOTE (prepare_model_smote).
+Lựa chọn tính năng được thực hiện bằng cách sử dụng ngưỡng phương sai (var_threshold_selection) và loại bỏ tính năng đệ quy (rfe_selection), đảm bảo rằng chỉ các tính năng phù hợp nhất mới được sử dụng trong mô hình.
+Nhìn chung, tập lệnh cung cấp một quy trình làm việc chi tiết để tiền xử lý dữ liệu, phân tích dữ liệu thăm dò, mã hóa tính năng, đào tạo mô hình, đánh giá và xử lý sự mất cân bằng lớp, làm cho nó trở thành một mẫu mạnh mẽ cho mô hình hồi quy logistic trong Python.
+
